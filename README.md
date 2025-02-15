@@ -14,8 +14,8 @@ want to have a look, check
 [the docs](https://docs.python.org/3/library/stdtypes.html#set) or
 [this Real Python article](https://realpython.com/python-sets/).
 
-In this assingment we will represent sets with the help of Python dictionaries.
-So for refresh your memory by 
+In this assingment we will represent sets with the help of Python dictionaries. Our implementation will not be recursive either.
+So refresh your memory by 
 [the docs](https://docs.python.org/3/library/stdtypes.html#dict), or Think
 Python, Chapter 11. 
 
