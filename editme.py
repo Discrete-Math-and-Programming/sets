@@ -5,6 +5,7 @@ size = lambda x: len(x.keys())
 
 # `set_from_list` -- takes a list and returns a set.
 
+
 # `list_from_set` -- do the reverse of above. 
 
 
@@ -43,16 +44,16 @@ def test():
             return "[Error]"
 
     test_cases = {
-        "set_from_list": (editme.set_from_list, [[1, 2, 3]], {1: None, 2: None, 3: None}),
-        "list_from_set": (editme.list_from_set, [{1: None, 2: None, 3: None}], [1, 2, 3]),
-        "add": (editme.add, [{1: None, 2: None}, 3], {1: None, 2: None, 3: None}),
-        "remove": (editme.remove, [{1: None, 2: None, 3: None}, 2], {1: None, 3: None}),
-        "union": (editme.union, [{1: None, 2: None}, {2: None, 3: None}], {1: None, 2: None, 3: None}),
-        "intersection": (editme.intersection, [{1: None, 2: None}, {2: None, 3: None}], {2: None}),
-        "difference": (editme.difference, [{1: None, 2: None}, {2: None, 3: None}], {1: None}),
-        "symmetric_difference": (editme.symmetric_difference, [{1: None, 2: None}, {2: None, 3: None}], {1: None, 3: None}),
-        "is_subset_of": (editme.is_subset_of, [{1: None, 2: None}, {1: None, 2: None, 3: None}], True),
-        "is_superset_of": (editme.is_superset_of, [{1: None, 2: None, 3: None}, {1: None, 2: None}], True),
+        "set_from_list": (set_from_list, [[1, 2, 3]], {1: None, 2: None, 3: None}),
+        "list_from_set": (list_from_set, [{1: None, 2: None, 3: None}], [1, 2, 3]),
+        "add": (add, [{1: None, 2: None}, 3], {1: None, 2: None, 3: None}),
+        "remove": (remove, [{1: None, 2: None, 3: None}, 2], {1: None, 3: None}),
+        "union": (union, [{1: None, 2: None}, {2: None, 3: None}], {1: None, 2: None, 3: None}),
+        "intersection": (intersection, [{1: None, 2: None}, {2: None, 3: None}], {2: None}),
+        "difference": (difference, [{1: None, 2: None}, {2: None, 3: None}], {1: None}),
+        "symmetric_difference": (symmetric_difference, [{1: None, 2: None}, {2: None, 3: None}], {1: None, 3: None}),
+        "is_subset_of": (is_subset_of, [{1: None, 2: None}, {1: None, 2: None, 3: None}], True),
+        "is_superset_of": (is_superset_of, [{1: None, 2: None, 3: None}, {1: None, 2: None}], True),
     }
     
     print("Function Name            | Status")
