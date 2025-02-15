@@ -53,3 +53,8 @@ If you feel lost at this task check the following:
 Code your definitions in the file `editme.py` in the repo and commit your
 changes to the repo. You can work in increments, but make sure that you commit
 when you have something that works.
+
+Included in `eidtme.py` is a test suite that you can use to test your functions.
+You can run your tests any time during your work by running `test()`, it will
+simply report `[Error]` for those functions you have not implemented yet and for
+those who actually raise an error.

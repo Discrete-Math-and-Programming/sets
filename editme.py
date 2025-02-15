@@ -3,7 +3,6 @@
 # Here is a sample solution for the cardinality of a set
 size = lambda x: len(x.keys())
 
-
 # `set_from_list` -- takes a list and returns a set.
 
 # `list_from_set` -- do the reverse of above. 
@@ -33,3 +32,31 @@ size = lambda x: len(x.keys())
 # `is_superset_of`
 
 
+def test():
+    """Use this function to test your solutions"""
+
+    def test_function(func, *args, expected):
+        try:
+            result = func(*args)
+            return "[OK]" if result == expected else "[Not OK]"
+        except Exception as e:
+            return "[Error]"
+
+    test_cases = {
+        "set_from_list": (editme.set_from_list, [[1, 2, 3]], {1: None, 2: None, 3: None}),
+        "list_from_set": (editme.list_from_set, [{1: None, 2: None, 3: None}], [1, 2, 3]),
+        "add": (editme.add, [{1: None, 2: None}, 3], {1: None, 2: None, 3: None}),
+        "remove": (editme.remove, [{1: None, 2: None, 3: None}, 2], {1: None, 3: None}),
+        "union": (editme.union, [{1: None, 2: None}, {2: None, 3: None}], {1: None, 2: None, 3: None}),
+        "intersection": (editme.intersection, [{1: None, 2: None}, {2: None, 3: None}], {2: None}),
+        "difference": (editme.difference, [{1: None, 2: None}, {2: None, 3: None}], {1: None}),
+        "symmetric_difference": (editme.symmetric_difference, [{1: None, 2: None}, {2: None, 3: None}], {1: None, 3: None}),
+        "is_subset_of": (editme.is_subset_of, [{1: None, 2: None}, {1: None, 2: None, 3: None}], True),
+        "is_superset_of": (editme.is_superset_of, [{1: None, 2: None, 3: None}, {1: None, 2: None}], True),
+    }
+    
+    print("Function Name            | Status")
+    print("-------------------------|--------")
+    for name, (func, args, expected) in test_cases.items():
+        status = test_function(func, *args, expected=expected)
+        print(f"{name:<25} | {status}")
